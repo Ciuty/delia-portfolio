@@ -1,0 +1,107 @@
+* {
+    /*box-sizing: border-box;
+    border: 1px solid black;
+    padding: 1px;
+    margin: 1px;*/
+    --footer-height: 100vh;
+    --background: #cbcbcb;
+}
+:root {
+    font-size: calc(100vw / 80);
+}
+#navigation {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--background);
+}
+nav {
+    flex-grow: 3;
+}
+#logo, #social-media {
+    flex-grow: 1;
+    max-width: 20%
+}
+#logo img {
+    display: block;
+    max-width: 70%;
+    margin: auto;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+}
+li a {
+    display: block;
+    text-decoration: none;
+}
+header h1 {
+    text-align: center;
+}
+main img {
+    display: block;
+    width: 90vw;
+    margin: auto ;
+}
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+#content-wrap {
+  padding-bottom: var(--footer-height);
+}
+#box-container {
+    margin: 5vh 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#box-container button, #boox-container button:visited {
+    display: block;
+    align-self: center;
+    max-width: 41%;
+    padding: 0.5rem 2rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    background-color: #cbcbcb77;
+    border: 2px solid white;
+    transition-duration: 0.2s;
+}
+#box-container button:hover {
+    background-color: #5f5f5f77;
+    color: white;
+}
+#box-container button:active {
+    background-color: #cbcbcb77;
+    color: black;
+}
+#content-left, #content-center, #content-right {
+    width: 25vw;
+    height: 25vw;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: var(--footer-height);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-image: url(Forest.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#one {
+    align-content: flex-end;
+}
+#content-center {
+    background-image: url(Ink.svg);
+    object-fit: cover;
+    background-size: cover;
+}
