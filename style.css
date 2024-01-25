@@ -1,8 +1,5 @@
 * {
-    /*box-sizing: border-box;
-    border: 1px solid black;
-    padding: 1px;
-    margin: 1px;*/
+    box-sizing: border-box;
     --footer-height: 100vh;
     --background: #cbcbcb;
 }
@@ -26,7 +23,7 @@ nav {
     max-width: 70%;
     margin: auto;
 }
-ul {
+nav ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
@@ -55,6 +52,7 @@ main img {
 #box-container {
     margin: 5vh 0;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
 }
@@ -85,6 +83,11 @@ main img {
     flex-direction: column;
     justify-content: center;
 }
+#content-center {
+    background-image: url(Ink.svg);
+    object-fit: cover;
+    background-size: cover;
+}
 #footer {
   position: absolute;
   bottom: 0;
@@ -92,16 +95,22 @@ main img {
   height: var(--footer-height);
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   background-image: url(Forest.svg);
   background-repeat: no-repeat;
   background-size: cover;
 }
-#one {
-    align-content: flex-end;
+.footer-box {
+    align-self: flex-end;
+    color:white
 }
-#content-center {
-    background-image: url(Ink.svg);
-    object-fit: cover;
-    background-size: cover;
+@media only screen and (max-width:576px) {
+    :root {
+        font-size: calc(100vw / 20);
+    }
+    #content-left, #content-center, #content-right {
+        width: 75vw;
+        height: 75vw;
+    }
+    
 }
