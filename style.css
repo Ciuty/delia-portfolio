@@ -2,52 +2,78 @@
     box-sizing: border-box;
     --footer-height: 100vh;
     --background: #cbcbcb;
+    --test: #000000;
 }
 :root {
-    font-size: calc(100vw / 80);
+    font-size: calc(100vw / 70);
 }
 #navigation {
     display: flex;
     flex-direction: row;
     background-color: var(--background);
+    height: 6vw;
 }
 nav {
-    flex-grow: 3;
+    flex-grow: 5;
 }
-#logo, #social-media {
+#social-media {
     flex-grow: 1;
-    max-width: 20%
-}
-#logo img {
-    display: block;
-    max-width: 70%;
-    margin: auto;
 }
 nav ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    
+    height: 100%;
+    margin: auto;
+    padding: 0;
+}
+li {
+    margin: auto;
 }
 li a {
     display: block;
     text-decoration: none;
 }
 header h1 {
+    font-size: 3rem;
     text-align: center;
+    margin: auto;
 }
 main img {
     display: block;
     width: 90vw;
     margin: auto ;
 }
+#social-media img {
+    width: 2.5vw;
+    height: 2.5vw;
+    margin: auto;
+}
+#social-media {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
 #page-container {
-  position: relative;
-  min-height: 100vh;
+    position: relative;
+    min-height: 100vh;
 }
 #content-wrap {
-  padding-bottom: var(--footer-height);
+    padding-bottom: var(--footer-height);
+}
+#welcome {
+    width: 100vw;
+    height: 40vw;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+#logo img {
+    width: 25vw;
+}
+#logo {
+    margin: auto;
 }
 #box-container {
     margin: 5vh 0;
@@ -56,7 +82,7 @@ main img {
     flex-direction: row;
     justify-content: space-evenly;
 }
-#box-container button, #boox-container button:visited {
+#box-container button, #box-container button:visited {
     display: block;
     align-self: center;
     max-width: 41%;
@@ -102,15 +128,18 @@ main img {
 }
 .footer-box {
     align-self: flex-end;
-    color:white
+    color:white;
+    margin: 0 auto;
 }
 @media only screen and (max-width:576px) {
-    :root {
-        font-size: calc(100vw / 20);
-    }
     #content-left, #content-center, #content-right {
-        width: 75vw;
-        height: 75vw;
+        width: 50vw;
+        height: 50vw;
     }
-    
+    #content-wrap {
+        padding-bottom: 50vh;
+    }
+    #footer {
+        height: 50vh;
+    }
 }
