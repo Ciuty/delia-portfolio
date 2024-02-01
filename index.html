@@ -4,7 +4,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <title>Welcome</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link media="only screen and (max-width:576px)" href="css/mobile.css" rel="stylesheet">
     </head>
     <body>
         <div id="page-container">
@@ -15,24 +16,24 @@
                             <ul>
                                 <li><a class="active-nav-button" href="index.html">HOME</a></li>
                                 <li><a href="">ABOUT</a></li>
-                                <li><a href="">GALLERY</a></li>
+                                <li><a href="online-gallery.html">GALLERY</a></li>
                             </ul>
                         </nav>
                         <div id="social-media">
-                            <img src="facebook.svg" alt="facebook icon">
-                            <img src="instagram.svg" alt="instagram icon">
-                            <img src="twitter.svg" alt="twitter icon">
-                            <img src="pinterest.svg" alt="pinterest icon">
-                            <img src="tumblr.svg" alt="tumblr icon">
+                            <img src="images/facebook.svg" alt="facebook icon">
+                            <a href="https://www.instagram.com/deliaillustrations2121/"><img src="images/instagram.svg" alt="instagram icon"></a>
+                            <img src="images/twitter.svg" alt="twitter icon">
+                            <img src="images/pinterest.svg" alt="pinterest icon">
+                            <a href="https://www.tumblr.com/deliaillustrations"><img src="images/tumblr.svg" alt="tumblr icon"></a>
                         </div>
                     </div>
                     <div id="welcome">
-                        <div id="logo"><img src="logo2.svg" alt="Delia's illustrations logo"></div>
+                        <div id="logo"><img src="images/logo2.svg" alt="Delia's illustrations logo"></div>
                         <script src="greeting.js"></script>
                     </div>
                 </header>
                 <main>
-                    <img src="Cosmo_wide.jpg" alt="Cosmonaut in space">
+                    <img id="homeimage" src="images/Cosmo_wide.jpg" alt="Cosmonaut in space">
                     <div id="box-container">
                         <section id="content-left"><h3>Online Gallery</h3><p>Explore some of my work</p><button type="button">See more</button></section>
                         <section id="content-center"><h3>My Blog</h3><p>Some thoughts and ideas</p><button type="button">See more</button></section>

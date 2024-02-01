@@ -1,0 +1,12 @@
+
+
+#content-left, #content-center, #content-right {
+    width: 50vw;
+    height: 50vw;
+}
+#content-wrap {
+    padding-bottom: 50vh;
+}
+#footer {
+    height: 50vh;
+}
