@@ -1,4 +1,6 @@
-
+:root {
+    font-size: 16px;
+}
 
 #content-left, #content-center, #content-right {
     width: 50vw;
