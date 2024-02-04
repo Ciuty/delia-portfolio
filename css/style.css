@@ -1,7 +1,5 @@
 * {
-    --footer-height: 100vh;
-    --background: #cbcbcb;
-    --test: #000000;
+    --footer-height: 55vh;
     margin: 0;
     --color1: #0d3b66;
     --color2: #faf0ca;
@@ -11,15 +9,16 @@
     color: var(--color1);
 }
 :root {
-    font-size: calc(100vw / 70);
+    font-size: 16px;
 }
 #page-container {
     position: relative;
+    width: 100%;
     min-height: 100vh;
-    background-color: var(--color2)
+    background-color: var(--color2);
 }
 #content-wrap {
-    padding: 1rem;
+    width: 100%;
     padding-bottom: var(--footer-height);
 }
 
@@ -32,6 +31,7 @@
     color: var(--color1);
     height: 6vw;
     box-shadow: 10px 10px var(--color4);
+    margin: 0 0.5rem 0.5rem 0.5rem;
 }
 nav {
     flex-grow: 5;
@@ -42,6 +42,7 @@ nav {
 nav ul {
     list-style-type: none;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
     height: 100%;
@@ -51,11 +52,26 @@ nav ul {
 li {
     margin: auto;
 }
-.nav a, .nav a:visited, .nav a:hover, .nav a:active {
+#navigation button, #navigation button:visited {
     font-size: 1.5rem;
-    display: block;
-    text-decoration: none;
-    color: var(--nav-color);
+    font-weight: bold;
+    padding: 0.5rem 2rem;
+    background-color: var(--color2);
+    border: none;
+    box-shadow: 10px 10px var(--color4);
+    transition-duration: 0.2s;
+    color: var(--color1);
+}
+#navigation button:hover {
+    background-color: var(--color4);
+    color: var(--color2);
+    box-shadow: 10px 10px #e97816;
+}
+#navigation button:active {
+    color: var(--color1);
+    background-color: var(--color5);
+    box-shadow: 5px 5px #e97816;
+    transform: translate(5px, 5px);
 }
 header h1 {
     font-size: 3rem;
@@ -69,7 +85,7 @@ header h1 {
 
 #homeimage {
     display: block;
-    width: 90vw;
+    width: 75vw;
     margin: auto ;
 }
 #social-media img, #social-media a {
@@ -83,7 +99,7 @@ header h1 {
     align-content: center;
 }
 #welcome {
-    width: 100vw;
+    width: 100%;
     height: 40vw;
     display: flex;
     justify-content: center;
@@ -109,30 +125,31 @@ header h1 {
     padding: 0.5rem 2rem;
     font-size: 0.8rem;
     font-weight: bold;
-    background-color: #cbcbcb77;
-    border: 2px solid white;
+    background-color: var(--color2);
+    border: none;
+    box-shadow: 10px 10px var(--color4);
     transition-duration: 0.2s;
 }
 #box-container button:hover {
-    background-color: #5f5f5f77;
-    color: white;
+    color: var(--color2);
+    background-color: var(--color4);
+    box-shadow: 10px 10px #e97816;
 }
 #box-container button:active {
-    background-color: #cbcbcb77;
-    color: black;
+    color: var(--color1);
+    background-color: var(--color5);
+    box-shadow: 5px 5px #e97816;
+    transform: translate(5px, 5px);
 }
 #content-left, #content-center, #content-right {
-    width: 25vw;
-    height: 25vw;
+    min-width: 25vw;
+    min-height: 25vw;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-#content-center {
-    background-image: url(../images/Ink.svg);
-    object-fit: cover;
-    background-size: cover;
+    background-color: var(--color3);
+    box-shadow: 10px 10px var(--color4);
 }
 
         /* Gallery */
@@ -168,20 +185,31 @@ header h1 {
 
     /* Footer */
 
-#footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: var(--footer-height);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background-image: url(../images/Forest.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: grid;
+    grid-template:
+        '. . . . .'
+        '. boxone . boxtwo .'
+        '. boxone . boxtwo .';
+    height: var(--footer-height);
+    background-color: var(--color1);
+}
+#boxone {
+    grid-area: boxone;
+}    
+#boxtwo {
+    grid-area: boxtwo;
 }
 .footer-box {
-    align-self: flex-end;
-    color:white;
-    margin: 0 auto;
+    padding:1rem;
 }
+.footer-box h2, .footer-box a {
+    color: var(--color2);
+}
+.footer-box h2 {font-size: 2.4rem;}
+.footer-box a:link, .footer-box a:visited {font-size: 1.8rem; text-decoration: none;}
+.footer-box a:hover {color: var(--color3);}
+.footer-box a:active {color: var(--color5);}
