@@ -2,8 +2,8 @@
 <html lang="en">
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="utf-8">
-        <title>Welcome</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>Delia's illustrations</title>
         <link rel="icon" type="image/x-icon" href="/images/favicon.svg">
         <link rel="stylesheet" href="css/style.css">
         <link media="only screen and (max-width:576px)" href="css/mobile.css" rel="stylesheet">
@@ -13,12 +13,13 @@
             <div id="content-wrap">
                 <header>
                     <div id="navigation">
-                        <nav>
-                            <ul class="nav">
-                                <li><a class="active-nav-button" href="index.html"><button>HOME</button></a></li>
-                                <li><a href="online-gallery.html"><button>GALLERY</button></a></li>
-                                <li><a href="about.html"><button>ABOUT</button></a></li>
-                                <li><a href="contact.html"><button>CONTACT</button></a></li>
+                        <div id="logo"><img src="images/logo2.svg" alt="Delia's illustrations logo"></div>
+                        <nav role="navigation">
+                            <ul  class="nav">
+                                <li><a class="active-nav-button" href="index.html"><button type="button">HOME</button></a></li>
+                                <li><a href="online-gallery.html"><button type="button">GALLERY</button></a></li>
+                                <li><a href="about.html"><button type="button">ABOUT</button></a></li>
+                                <li><a href="contact.html"><button type="button">CONTACT</button></a></li>
                             </ul>
                         </nav>
                         <div id="social-media">
@@ -27,12 +28,15 @@
                         </div>
                     </div>
                     <div id="welcome">
-                        <div id="logo"><img src="images/logo2.svg" alt="Delia's illustrations logo"></div>
                         <script src="greeting.js"></script>
+                        <h2>Welcome to my artist webpage! Feel free to explore, hope you enjoy your time here.</h2>
                     </div>
                 </header>
-                <main>
-                    <img id="homeimage" src="images/ReggioCalabria1.png" alt="Drawing">
+                <main role="main">
+                    <hr>
+                    <script src="quote.js"></script>
+                    <hr>
+                    <img id="homeimage" src="images/ReggioCalabria1.png" alt="Drawing of Sicili seen from Reggio Calabria, Italy">
                     <div id="box-container">
                         <section id="content-left"><h3>Online Gallery</h3><p>Explore some of my work</p><button type="button">See more</button></section>
                         <section id="content-center"><h3>My Blog</h3><p>Some thoughts and ideas</p><button type="button">See more</button></section>
