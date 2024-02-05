@@ -226,7 +226,11 @@ p.quote {
     height: 80vh;
     object-fit: cover;
 }
-
+@media (max-width:560px) {
+    .gallery .popup-image img {
+        max-width: 95%;
+    }
+}
 .gallery h2, .gallery h3 {
     width: 100%;
 }
