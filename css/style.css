@@ -207,6 +207,7 @@ p.quote {
     height: 100%;
     width: 100%;
     z-index: 1;
+    display: none;
 }
 .gallery .popup-image span {
     position: absolute;
@@ -223,12 +224,21 @@ p.quote {
     transform: translate(-50%, -50%);
     border: 5px solid var(--color3);
     border-radius: 5px;
-    height: 80vh;
+    max-height: 85%;
     object-fit: cover;
 }
-@media (max-width:560px) {
+.gallery .popup-image p {
+    margin: auto;
+    display: block;
+    width: 80%;
+    text-align: center;
+    color: var(--color2);
+    padding: 10px 0;
+    height: 150px;
+}
+@media (max-width:500px) {
     .gallery .popup-image img {
-        max-width: 95%;
+        width: 95%;
     }
 }
 .gallery h2, .gallery h3 {
