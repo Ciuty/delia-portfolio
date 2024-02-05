@@ -1,11 +1,7 @@
-
-#content-left, #content-center, #content-right {
-    width: 50vw;
-    height: 50vw;
-}
-#content-wrap {
-    padding-bottom: 50vh;
-}
-#footer {
-    height: 50vh;
-}
+#navigation {height: 10rem;}
+#navigation button {font-size:.8rem;}
+nav ul, #social-media{flex-direction: column;}
+#content-left, #content-center, #content-right {gap: 1rem;}
+.gallery .image-container .image {width: 7rem;height: 7rem;}
+.footer-box h2 {font-size: 1.5rem;}
+.footer-box a:link, .footer-box a:visited {font-size: 1rem;}
