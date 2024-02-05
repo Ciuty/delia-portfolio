@@ -172,36 +172,73 @@ p.quote {
 
         /* Gallery */
 
-#gallery {
-    margin: 0 auto;
-    padding: 1rem 0.3rem;
+.gallery {
+    position: relative;
+    min-height: 100vh;
 }
-#gallery h2, #gallery h3 #gallery img {
+.gallery .image-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 0.7rem;
+}
+.gallery .image-container .image {
+    width: 15rem;
+    height: 15rem;
+    border: 0.5rem solid var(--color3);
+    box-shadow : 0 5px 15px rgba(0,0,0,.1);
+    overflow: hidden;
+    cursor: pointer;
+}
+.gallery .image-container .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .2s linear;
+}
+.gallery .image-container .image:hover img {
+    transform: scale(1.1);
+}
+.gallery .popup-image {
+    position: fixed;
+    top:0; left:0;
+    background: rgba(0,0,0,.9);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+.gallery .popup-image span {
+    position: absolute;
+    top:0; right:10px;
+    font-size: 4rem;
+    font-weight: bolder;
+    color: var(--color4);
+    cursor: pointer;
+    z-index: 1;
+}
+.gallery .popup-image img {
+    position: absolute;
+    top:50%; left:50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid var(--color3);
+    border-radius: 5px;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.gallery h2, .gallery h3 {
     width: 100%;
 }
-#gallery h2, #gallery h3 {
+.gallery h2, .gallery h3 {
     text-align: center;
     font-size: 3rem;
 }
-#gallery h3 {
+.gallery h3 {
     grid-column-start: span 3;
     font-size: 2rem;
 }
-#gallery img {
-    width: 30vw;
-    min-height: 30vw;
-    max-height: 30vw;
-    object-fit: cover;
-}
-#image-container {
-    max-width: 95vw;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 30vw);
-    grid-template-rows: auto;
-    grid-auto-flow: row;
-    grid-gap: 1rem 2rem;
-}
+
 
     /* Footer */
 

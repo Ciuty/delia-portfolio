@@ -13,7 +13,7 @@ if (hourNow > 20) {
     quote = 'Art is not what you see, but what you make others see.';
     quotename = ' - Edgar Degas';
 } else if (hourNow > 14) {
-    quote = 'our work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work.';
+    quote = 'Our work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work.';
     quotename = ' - Steve Jobs';
 } else if (hourNow > 12) {
     quote = 'The only thing I know is that I paint because I need to, and I paint whatever passes through my head without any other consideration.';
